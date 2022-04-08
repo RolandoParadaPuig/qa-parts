@@ -1,0 +1,183 @@
+:root {
+  --main-bg: hsl(202, 82%, 57%);
+  --main-shadow: 2px 2px 10px 3px #2a498c;
+  --main-nav-shadow: 1px 1px 3px #74747457;
+  --main-layout-color: #dedede;
+  --main-layout-header-color: #36a8eb;
+  --main-layout-sideNav-color: #fff;
+  --user-menu-header-color: #306bb8;
+  --user-menu-shadow: 0px 3px 5px #3078bb;
+}
+
+.login-form {
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.login-form-col {
+  box-shadow: var(--main-shadow);
+  overflow: scroll;
+  max-height: 30rem;
+  border-radius: 5px;
+  height: 70vh;
+  background-color: #eee;
+}
+.login-img {
+  padding: 3em 0;
+}
+
+.auth-loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-layout {
+  height: 93vh;
+  overflow: auto;
+  background-color: var(--main-layout-color);
+}
+.main-layout-Header {
+  height: 7vh;
+  min-height: 32px;
+  background-color: var(--main-layout-header-color);
+  padding: 0;
+  margin: 0;
+}
+
+.main-layout-siderNav {
+  overflow: "auto";
+  height: "100vh";
+  position: "fixed";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: var(--main-nav-shadow);
+  background-color: var(--main-layout-sideNav-color);
+}
+
+.main-layout-navbar-menu {
+  width: 15vw;
+}
+.main-layout-navbar-menu-min {
+  width: 5vw;
+  --navbar-menu-name-display: none;
+}
+.main-layout-navbar-menu-min:hover {
+  position: relative;
+  width: 15vw;
+  --navbar-menu-name-display: block;
+}
+.navbar-menu-name-display {
+  display: none;
+  display: var(--navbar-menu-name-display);
+}
+.navbar-min-btn {
+  --top-line: 1.25em;
+  --bot-line: 1em;
+}
+.navbar-min-btn:hover {
+  --top-line: 2em;
+  --bot-line: 2em;
+}
+.top-line {
+  transition: all 0.25s;
+  width: var(--top-line);
+  background-color: #fff;
+  border: none;
+  height: 2px;
+}
+.mid-line {
+  width: 2em;
+  background-color: #fff;
+  border: none;
+  height: 2px;
+}
+.bot-line {
+  transition: all 0.25s;
+  width: var(--bot-line);
+  background-color: #fff;
+  border: none;
+  height: 2px;
+}
+
+.user-menu {
+  width: 200px;
+  min-height: 7rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5em;
+  border-radius: 4px;
+}
+.user-menu-header {
+  height: 3rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px 4px 0 0;
+  background-color: var(--user-menu-header-color);
+}
+.user-menu-hover {
+  width: 95%;
+  margin-top: 1.25em;
+  height: 2rem;
+}
+.user-menu-hover:hover {
+  background-color: var(--main-layout-header-color);
+  box-shadow: var(--user-menu-shadow);
+  --logout-btn-color: red;
+  --logout-btn-transform: scale(1.25);
+}
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--logout-btn-color);
+  transform: var(--logout-btn-transform);
+  transition: all 0.25s;
+}
+.logout-btn-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.logout-btn-header:hover {
+  transform: scale(1.25);
+  color: red;
+  transition: all 0.25s;
+}
+.center-col {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.no-visible {
+  transform: scale(0);
+  transition: all 0.25s;
+}
+.visible {
+  transform: scale(1);
+  transition: all 0.25s;
+}
+@media (max-height: 667px) {
+  .login-form-col {
+    height: 90vh;
+    max-height: 35rem;
+  }
+  .main-layout {
+    height: 90vh;
+  }
+  .main-layout-Header {
+    height: 10vh;
+  }
+}
+
+@media (min-height: 490px) {
+  .user-menu {
+    margin-top: 1.25em;
+  }
+}
