@@ -63,29 +63,8 @@ export const MainHeader = (props) => {
     <Header className="main-layout-Header">
       <Row style={{ height: "100%" }}>
         <Col
-          span={1}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Button
-            type="link"
-            className="navbar-min-btn"
-            onClick={() => {
-              console.log(props.navMin);
-              props.setNavMin(!props.navMin);
-            }}
-          >
-            <hr className="top-line" />
-            <hr className="mid-line" />
-            <hr className="bot-line" />
-          </Button>
-        </Col>
-        <Col
           span={2}
-          offset={20}
+          offset={21}
           style={{
             display: "flex",
             alignItems: "center",

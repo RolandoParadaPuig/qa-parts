@@ -35,14 +35,15 @@ export const MainLayout = () => {
       <Layout>
         <MainHeader setNavMin={setNavMin} navMin={navMin} />
       </Layout>
-      <Layout className="main-layout">
+      <Layout className={navMin ? "main-content-min" : "main-layout"}>
         <MainNavbar
           setNavValue={setNavValue}
+          setNavMin={setNavMin}
           navValue={navValue}
           navMin={navMin}
         />
         <Content>
-          <MainCointent navValue={navValue} />
+          <MainCointent navValue={navValue} navMin={navMin} />
         </Content>
       </Layout>
     </Layout>

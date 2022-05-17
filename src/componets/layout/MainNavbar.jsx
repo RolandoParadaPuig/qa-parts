@@ -1,13 +1,43 @@
 import React from "react";
-import { Col, Divider, Layout, Menu, PageHeader, Row } from "antd";
+import { Col, Layout, Menu, Row, Button, Typography } from "antd";
+import { getAuth } from "firebase/auth";
 import { IoIosArrowForward } from "react-icons/io";
+import { AiOutlineForm } from "react-icons/ai";
 import { FiHome } from "react-icons/fi";
+import { UserOutlined } from "@ant-design/icons";
 const { Sider } = Layout;
 const { SubMenu } = Menu;
+const auth = getAuth();
+const { Text } = Typography;
 export const MainNavbar = (props) => {
   return (
     <Sider className="main-layout-siderNav" width={"auto"}>
-      <PageHeader>{props.navMin ? <br /> : "Navigation"}</PageHeader>
+      <div
+        style={{
+          margin: 0,
+          padding: 0,
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        {" "}
+        <Button
+          type="link"
+          size="middle"
+          className="navbar-min-btn"
+          onClick={() => {
+            console.log(props.navMin);
+            props.setNavMin(!props.navMin);
+          }}
+        >
+          <div className="btn-heigth">
+            <hr className="top-line" />
+            <hr className="mid-line" />
+            <hr className="bot-line" />
+          </div>
+        </Button>
+        {props.navMin ? <br /> : <Text>Navigation</Text>}
+      </div>
       <Menu
         mode="inline"
         activeKey={props.navValue}
@@ -18,6 +48,7 @@ export const MainNavbar = (props) => {
         }
       >
         <Menu.Item
+          style={{ padding: "0 10px 0 15px" }}
           key="1"
           onClick={() => {
             props.setNavValue("1");
@@ -28,7 +59,7 @@ export const MainNavbar = (props) => {
               <FiHome />
             </Col>
             <Col
-              span={16}
+              span={15}
               className={props.navMin ? "navbar-menu-name-display" : ""}
             >
               Dashboard
@@ -43,20 +74,56 @@ export const MainNavbar = (props) => {
           </Row>
         </Menu.Item>
         <Menu.Item
+          style={{ padding: "0 10px 0 15px" }}
           key="2"
           onClick={() => {
             props.setNavValue("2");
           }}
         >
-          Option 2
+          <Row justify="space-between">
+            <Col span={4}>
+              <AiOutlineForm />
+            </Col>
+            <Col
+              span={15}
+              className={props.navMin ? "navbar-menu-name-display" : ""}
+            >
+              Form
+            </Col>
+            <Col span={4}>
+              {props.navValue == "2" ? (
+                <IoIosArrowForward className="visible" />
+              ) : (
+                <IoIosArrowForward className="no-visible" />
+              )}
+            </Col>
+          </Row>
         </Menu.Item>
         <Menu.Item
+          style={{ padding: "0 10px 0 15px" }}
           key="3"
           onClick={() => {
             props.setNavValue("3");
           }}
         >
-          Option 3
+          <Row justify="space-between">
+            <Col span={4}>
+              <UserOutlined />
+            </Col>
+            <Col
+              span={15}
+              className={props.navMin ? "navbar-menu-name-display" : ""}
+            >
+              {auth.currentUser.displayName}
+            </Col>
+            <Col span={4}>
+              {props.navValue == "3" ? (
+                <IoIosArrowForward className="visible" />
+              ) : (
+                <IoIosArrowForward className="no-visible" />
+              )}
+            </Col>
+          </Row>
         </Menu.Item>
       </Menu>
     </Sider>

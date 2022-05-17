@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import React, { Fragment } from "react";
 import { Dashboard } from "../dashboard/Dashboard";
+import { FirstArticle } from "../firstArticle/FirstArticle";
 
 export const MainCointent = (props) => {
   return (
@@ -8,7 +9,7 @@ export const MainCointent = (props) => {
       {props.navValue == "1" ? (
         <Dashboard />
       ) : props.navValue == "2" ? (
-        "Option 2"
+        <FirstArticle />
       ) : (
         "Option 3"
       )}
