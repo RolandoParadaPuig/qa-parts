@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Layout, Menu, Row, Button, Typography } from "antd";
+import "./mainNavbar.css";
 import { getAuth } from "firebase/auth";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineForm } from "react-icons/ai";
@@ -48,7 +49,7 @@ export const MainNavbar = (props) => {
         }
       >
         <Menu.Item
-          style={{ padding: "0 10px 0 15px" }}
+          style={{ padding: "0 0px 0 15px" }}
           key="1"
           onClick={() => {
             props.setNavValue("1");
@@ -73,12 +74,13 @@ export const MainNavbar = (props) => {
             </Col>
           </Row>
         </Menu.Item>
+
         <Menu.Item
-          style={{ padding: "0 10px 0 15px" }}
           key="2"
           onClick={() => {
             props.setNavValue("2");
           }}
+          style={{ padding: "0 0px 0 15px" }}
         >
           <Row justify="space-between">
             <Col span={4}>
@@ -88,7 +90,7 @@ export const MainNavbar = (props) => {
               span={15}
               className={props.navMin ? "navbar-menu-name-display" : ""}
             >
-              Form
+              First Article
             </Col>
             <Col span={4}>
               {props.navValue == "2" ? (
@@ -100,7 +102,7 @@ export const MainNavbar = (props) => {
           </Row>
         </Menu.Item>
         <Menu.Item
-          style={{ padding: "0 10px 0 15px" }}
+          style={{ padding: "0 0px 0 15px" }}
           key="3"
           onClick={() => {
             props.setNavValue("3");

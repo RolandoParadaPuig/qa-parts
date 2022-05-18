@@ -1,0 +1,16 @@
+.login-form {
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.login-form-col {
+  box-shadow: var(--main-shadow);
+  max-height: 30rem;
+  border-radius: 5px;
+  height: 70vh;
+  background-color: #eee;
+}
+.login-img {
+  padding: 3em 0;
+}

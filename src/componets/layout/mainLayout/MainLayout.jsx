@@ -1,10 +1,11 @@
 import { Layout } from "antd";
 import React, { useState, useEffect } from "react";
-import firebaseApp from "../../../credentials";
+import firebaseApp from "../../../../credentials";
 import { getAuth } from "firebase/auth";
-import { MainHeader } from "./MainHeader";
-import { MainNavbar } from "./MainNavbar";
-import { MainCointent } from "./MainCointent";
+import { MainHeader } from "../mainHeader/MainHeader";
+import { MainNavbar } from "../mainNavbar/MainNavbar";
+import { MainCointent } from "../mainContent/MainCointent";
+import "./mainLayout.css";
 import {
   collection,
   getDocs,
@@ -35,7 +36,7 @@ export const MainLayout = () => {
       <Layout>
         <MainHeader setNavMin={setNavMin} navMin={navMin} />
       </Layout>
-      <Layout className={navMin ? "main-content-min" : "main-layout"}>
+      <Layout className={navMin ? "main-layout-min" : "main-layout"}>
         <MainNavbar
           setNavValue={setNavValue}
           setNavMin={setNavMin}

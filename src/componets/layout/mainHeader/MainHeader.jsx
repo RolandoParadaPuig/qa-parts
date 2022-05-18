@@ -1,6 +1,7 @@
 import { Col, Row, Layout, Image, Button, Dropdown, Menu } from "antd";
 import { getAuth, signOut } from "firebase/auth";
 import { FiLogOut } from "react-icons/fi";
+import "./mainHeader.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
@@ -41,7 +42,7 @@ export const MainHeader = (props) => {
           }}
         >
           <Row justify="space-around">
-            <Col span={4} className="logout-btn">
+            <Col span={2} className="logout-btn">
               <FiLogOut />
             </Col>
             <Col
@@ -63,8 +64,8 @@ export const MainHeader = (props) => {
     <Header className="main-layout-Header">
       <Row style={{ height: "100%" }}>
         <Col
-          span={2}
-          offset={21}
+          span={1}
+          offset={23}
           style={{
             display: "flex",
             alignItems: "center",

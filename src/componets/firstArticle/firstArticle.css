@@ -1,0 +1,9 @@
+.first-article-form {
+  background-color: #eee;
+  box-shadow: var(--main-shadow);
+  margin-top: 2.5em;
+  padding-top: 2em;
+  height: 95vh;
+  max-height: 45em;
+  overflow: auto;
+}

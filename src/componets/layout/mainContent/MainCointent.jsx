@@ -1,7 +1,7 @@
 import { Col, Row } from "antd";
 import React, { Fragment } from "react";
-import { Dashboard } from "../dashboard/Dashboard";
-import { FirstArticle } from "../firstArticle/FirstArticle";
+import { Dashboard } from "../../dashboard/Dashboard";
+import { FirstArticle } from "../../firstArticle/FirstArticle";
 
 export const MainCointent = (props) => {
   return (

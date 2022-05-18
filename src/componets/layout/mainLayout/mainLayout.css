@@ -1,0 +1,19 @@
+.main-layout {
+  height: 93vh;
+  overflow: auto;
+  width: 100vw - 15em;
+  margin: 0;
+  padding: 0;
+  margin-left: 15em;
+  background-color: var(--main-layout-color);
+  transition: all 0.25s;
+}
+.main-layout-min {
+  z-index: 0;
+  height: 93vh;
+  overflow: auto;
+  width: 100vw - 3.75em;
+  margin-left: 3.75em;
+  background-color: var(--main-layout-color);
+  transition: all 0.25s;
+}

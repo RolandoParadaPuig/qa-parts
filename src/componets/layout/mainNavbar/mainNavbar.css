@@ -1,0 +1,82 @@
+.main-layout-siderNav {
+  z-index: 1;
+  height: 93vh;
+  position: absolute;
+  width: auto;
+  left: 0;
+  top: 7vh;
+  bottom: 0;
+  box-shadow: var(--main-nav-shadow);
+  background-color: var(--main-layout-sideNav-color);
+}
+
+.main-layout-navbar-menu {
+  width: 15em;
+}
+
+.main-layout-navbar-menu-min {
+  z-index: 1;
+  width: 3.75em;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  --navbar-menu-name-display: none;
+  overflow: visible;
+}
+
+.main-layout-navbar-menu-min:hover {
+  position: relative;
+  width: 10em;
+  --navbar-menu-name-display: block;
+  --top-line: 100%;
+  --bot-line: 100%;
+}
+.navbar-menu-name-display {
+  display: none;
+  display: var(--navbar-menu-name-display);
+}
+.navbar-min-btn {
+  --top-line: 75%;
+  --bot-line: 50%;
+}
+.btn-heigth {
+  height: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar-min-btn:hover {
+  --top-line: 100%;
+  --bot-line: 100%;
+}
+.top-line {
+  transition: all 0.25s;
+  width: var(--top-line);
+  background-color: var(--main-layout-header-color);
+  border: none;
+  height: 1.3px;
+  margin: 0 0 0.75px;
+}
+.mid-line {
+  width: 1.5em;
+  background-color: var(--main-layout-header-color);
+  border: none;
+  height: 1.3px;
+  margin: 0 0 0.75px;
+}
+.bot-line {
+  transition: all 0.25s;
+  width: var(--bot-line);
+  background-color: var(--main-layout-header-color);
+  border: none;
+  height: 1.3px;
+  margin: 0 0 0.75px;
+}
+.no-visible {
+  transform: scale(0);
+  transition: all 0.25s;
+}
+.visible {
+  transform: scale(1);
+  transition: all 0.25s;
+}
